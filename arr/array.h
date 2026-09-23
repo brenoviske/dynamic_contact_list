@@ -12,6 +12,8 @@ typedef struct{
 Array *create_array(Arena *arena , size_t cap);
 int push(Arena *arena , Array *arr, Ctt *c);
 int count_contacts(Array *arr);
+void search_contact(Array *arr,char* const name);
+double mean_age(Array *arr);
 void print_all(Array *arr);
 
 

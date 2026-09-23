@@ -62,3 +62,22 @@ void print_all(Array *arr){
     for( int i = 0 ; i < arr->size ; ++i) print_ctt(&arr->data[i]);
     return;
 }
+
+// Adding methods here for searching it up contact , mean_age and more very soon
+
+void search_contact(Array *arr, char* const name){
+    if( arr == NULL || name == NULL ) return ;
+
+    for( int i = 0; i < arr->size ; ++i){
+        if(strcmp(arr->data[i].name,name) == 0 ) print_ctt(&arr->data[i]); // Printing the contact if it is a match;
+    } 
+    return;
+}
+
+double mean_age(Array *arr){
+    if( arr == NULL ) return 0 ; 
+    
+    int total = 0 ; 
+    for( int i = 0; i < arr->size ; ++i ) total+=arr->data[i].age;
+    return (double) total / arr->size; // Returning here the mean of the ages currently stored in the arrays contacts;
+}
