@@ -2,9 +2,6 @@
 #include "../memory/arena.h"
 #include <string.h>
 #include <stdio.h>
-
-
-
 char* copy_string(
     Arena *arena,
     char* const name
